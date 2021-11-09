@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Hola {{ username }}</h2>
+  <p>
+    Te encuentras en el curso {{ course_name }}
+  </p>
+
+  {% if is_premium %}
+    <p>
+      El curso es premiun
+    </p>
+  {% else %}
+    <p>El curso es gratuito para todo el mundo </p>
+  {% endif %}
+
+  {% if courses %}
+    <p>Listado de cursos : </p>
+    <ul>
+      {% for course in courses %}
+        <li> {{ course }} </li>
+      {% endfor %}  
+    </ul>
+  {% endif %}
+</body>
+</html>
